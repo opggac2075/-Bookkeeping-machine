@@ -19,6 +19,6 @@ print('你總共花費的金額:$', sum)
                                                 #以下功能為將輸入的商品項目及價格以表格的方式存入電腦中
 with open('Account_table.csv', 'w') as f:   
     for p in products:
-        f.write(p[0] + ',' + str(p[1]) + '\n' )  #因為int在write的時候不能夠被連接(TypeError: can only concatenate str (not "int") to str)，用型別轉換轉成str之後再存成另一個變數加入清單，就可以符合write的條件了
+        f.write(p[0] + ',' + str(p[1]) + '\n' )  #因為int在write的時候不能夠被連接(TypeError: can only concatenate str (not "int") to str)，只要在前面加上str()將數值轉為字串就可以符合write的條件了
 
  
